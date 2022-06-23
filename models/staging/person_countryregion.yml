@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: person_countryregion_documentation
+    schema: northwind_el
+    description: This is the northwind erp postgres database replica
+    tables:
+      - name: person_countryregion
+        description: One record per person_countryregion. Includes cancelled and deleted orders.
+        columns:
+          - name: countryregioncode
+            description: Primary key of the person_countryregion table
+            tests:
+              - unique

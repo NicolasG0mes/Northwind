@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: sales_salesorderheader_documentation
+    schema: northwind_el
+    description: This is the northwind erp postgres database replica
+    tables:
+      - name: sales_salesorderheader
+        description: One record per order. Includes cancelled and deleted sales_salesorderheader.
+        columns:
+          - name: salesorderid
+            description: Primaries keys of the sales_salesorderheader table
+            tests:
+              - unique

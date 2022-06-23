@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: person_person_documentatition
+    schema: northwind_el
+    description: This is the northwind erp postgres database replica
+    tables:
+      - name: person_person
+        description: One record per person_person. Includes cancelled and deleted orders.
+        columns:
+          - name: businessentityid
+            description: Primary key of the person_person table
+            tests:
+              - unique

@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: sales_creditcard_documentation
+    schema: northwind_el
+    description: This is the northwind erp postgres database replica
+    tables:
+      - name: sales_creditcard
+        description: One record per order. Includes cancelled and deleted sales_creditcard.
+        columns:
+          - name: creditcardid
+            description: Primary key of the sales_creditcard table
+            tests:
+              - unique
+          - name: status
+            description: Note that the status can change over time
+
+      - name: order_details
+      - name: products
+      - name: shippers
+      - name: employees
+      - name: customers
+      - name: suppliers
+      - name: categories

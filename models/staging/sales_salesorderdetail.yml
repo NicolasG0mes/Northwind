@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: sales_salesorderdetail_documentation
+    schema: northwind_el
+    description: This is the northwind erp postgres database replica
+    tables:
+      - name: sales_salesorderdetail
+        description: One record per order. Includes cancelled and deleted sales_salesorderdetail.
+        columns:
+          - name: salesorderdetailid, salesorderid
+            description: Primaries keys of the sales_salesorderdetail table
+            tests:
+              - unique
